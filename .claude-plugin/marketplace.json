@@ -1,0 +1,21 @@
+{
+  "name": "md-render",
+  "description": "md-render: rich markdown rendering for Claude Code in the terminal",
+  "owner": {
+    "name": "Ruslan Fialkovskii",
+    "url": "https://github.com/ruslanfialkovskii"
+  },
+  "plugins": [
+    {
+      "name": "md-render",
+      "source": "./",
+      "description": "Rich markdown in Claude Code terminal replies: tinted headings, highlighted code, callouts, grid tables, math, mermaid diagrams and images, after render-markdown.nvim",
+      "category": "interface",
+      "tags": [
+        "markdown",
+        "terminal",
+        "mod"
+      ]
+    }
+  ]
+}

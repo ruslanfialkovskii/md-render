@@ -1,0 +1,152 @@
+{
+  "name": "md-render",
+  "displayName": "md-render",
+  "version": "0.6.0",
+  "description": "Rich markdown in Claude Code terminal replies: tinted headings, highlighted code, callouts, grid tables, math, mermaid diagrams and images, after render-markdown.nvim",
+  "author": {
+    "name": "Ruslan Fialkovskii",
+    "url": "https://github.com/ruslanfialkovskii"
+  },
+  "homepage": "https://github.com/ruslanfialkovskii/md-render#readme",
+  "repository": "https://github.com/ruslanfialkovskii/md-render",
+  "license": "MIT",
+  "keywords": [
+    "markdown",
+    "render",
+    "terminal",
+    "mod",
+    "tables",
+    "latex",
+    "mermaid",
+    "nerd-font"
+  ],
+  "userConfig": {
+    "enabled": {
+      "type": "boolean",
+      "title": "Custom markdown rendering",
+      "description": "Draw assistant replies with md-render instead of the built-in renderer",
+      "default": true
+    },
+    "icons": {
+      "type": "string",
+      "title": "Icon set",
+      "description": "nerd: Nerd Font glyphs; unicode: plain symbols for terminals without a Nerd Font",
+      "default": "nerd",
+      "options": [
+        "nerd",
+        "unicode"
+      ]
+    },
+    "headings": {
+      "type": "string",
+      "title": "Heading style",
+      "description": "full: tinted bar across the width; block: tint behind the title only; plain: coloured text",
+      "default": "full",
+      "options": [
+        "full",
+        "block",
+        "plain"
+      ]
+    },
+    "headingBorders": {
+      "type": "boolean",
+      "title": "Heading border lines",
+      "description": "Half-block lines above and below each heading's tint",
+      "default": false
+    },
+    "codeBlocks": {
+      "type": "string",
+      "title": "Code block style",
+      "description": "full: tinted block across the width; block: tint sized to the code; box: rounded border; plain: code only",
+      "default": "full",
+      "options": [
+        "full",
+        "block",
+        "box",
+        "plain"
+      ]
+    },
+    "codeBorders": {
+      "type": "boolean",
+      "title": "Code block border lines",
+      "description": "Half-block lines above and below a tinted code block",
+      "default": false
+    },
+    "tables": {
+      "type": "string",
+      "title": "Table style",
+      "description": "full: bordered grid; normal: grid without the top and bottom lines; compact: columns and a header rule only",
+      "default": "full",
+      "options": [
+        "full",
+        "normal",
+        "compact"
+      ]
+    },
+    "tableBorders": {
+      "type": "string",
+      "title": "Table borders",
+      "description": "Border characters of a grid table",
+      "default": "square",
+      "options": [
+        "square",
+        "round",
+        "double",
+        "heavy"
+      ]
+    },
+    "links": {
+      "type": "string",
+      "title": "Links",
+      "description": "clickable: https links open on click, URL hidden; url: always show the URL after the label",
+      "default": "clickable",
+      "options": [
+        "clickable",
+        "url"
+      ]
+    },
+    "math": {
+      "type": "string",
+      "title": "Math",
+      "description": "unicode: $...$ and $$...$$ converted to Unicode, display math laid out in two dimensions; raw: TeX as written",
+      "default": "unicode",
+      "options": [
+        "unicode",
+        "raw"
+      ]
+    },
+    "images": {
+      "type": "string",
+      "title": "Images",
+      "description": "local: draw image files on this machine; remote: also download https images a reply names (a prompt injection can use this to leak data); off: labels only",
+      "default": "local",
+      "options": [
+        "local",
+        "remote",
+        "off"
+      ]
+    },
+    "mermaid": {
+      "type": "string",
+      "title": "Mermaid",
+      "description": "ascii: mermaid blocks drawn as diagrams by mermaid-ascii (flowchart, sequence, ER); code: shown as code",
+      "default": "ascii",
+      "options": [
+        "ascii",
+        "code"
+      ]
+    },
+    "mermaidCommand": {
+      "type": "string",
+      "title": "mermaid-ascii command",
+      "description": "Name on PATH or full path of the mermaid-ascii binary that draws mermaid blocks",
+      "default": "mermaid-ascii"
+    },
+    "indent": {
+      "type": "boolean",
+      "title": "Indent sections",
+      "description": "Shift each section right by its heading level, as org-indent-mode does",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.DS_Store
+
+# Written by Claude Code each time it loads the mod from this folder.
+.claude-plugin/types/
+
+# Capture harness: its session, scratch project and captures.
+dev/harness/out/
+dev/harness/work/
+dev/harness/session-id
